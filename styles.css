@@ -1,0 +1,10 @@
+/* Apply styles to the white box */
+#cursorBox {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%; /* Make the box round */
+    pointer-events: none; /* Ignore mouse events so it doesn't interfere with interaction */
+}
