@@ -3,8 +3,8 @@
     position: fixed;
     width: 20px;
     height: 20px;
-    background-color: black;
+    background-color: white;
     border: 1px solid black;
-    border-radius: 50%; /* Make the box round */
+    border-radius: 75%; Remove or adjust this property 
     pointer-events: none; /* Ignore mouse events so it doesn't interfere with interaction */
 }
