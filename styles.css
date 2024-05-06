@@ -4,7 +4,7 @@
     width: 100px;
     height: 100px;
     background-color: white;
-    border: 10px solid black;
+    border: 10px solid grey;
     border-radius: 100%; Remove or adjust this property 
     pointer-events: none; /* Ignore mouse events so it doesn't interfere with interaction */
 }
