@@ -6,6 +6,6 @@ function calculate() {
 
 document.addEventListener('mousemove', function(e) {
     var cursorBox = document.getElementById('cursorBox');
-    cursorBox.style.left = e.pageX + 'px' + 50; // Set left position of the box
-    cursorBox.style.top = e.pageY + 'px' + 50; // Set top position of the box
+    cursorBox.style.left = e.pageX + 'px'; // Set left position of the box
+    cursorBox.style.top = e.pageY + 'px'; // Set top position of the box
 });
