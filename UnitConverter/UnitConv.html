@@ -11,10 +11,17 @@
     <div class="converter">
         <input type="number" id="inputValue" placeholder="Enter value">
         <select id="unitSelect" onchange="convertUnits()">
-            <option value="mm">Millimeters (mm)</option>
-            <option value="cm">Centimeters (cm)</option>
-            <option value="m">Meters (m)</option>
-            <option value="km">Kilometers (km)</option>
+            <option value="mm">Millimeters(mm)</option>
+            <option value="cm">Centimeters(cm)</option>
+            <option value="m">Meters(m)</option>
+            <option value="km">Kilometers(km)</option>
+        </select>
+        
+         <select id="outputUnit" onchange="convertUnits()">
+            <option value="mm">Millimeters(mm)</option>
+            <option value="cm">Centimeters(cm)</option>
+            <option value="m">Meters(m)</option>
+            <option value="km">Kilometers(km)</option>
         </select>
         <p id="output"></p>
     </div>
