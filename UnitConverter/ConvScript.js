@@ -1,29 +1,88 @@
 function convertUnits() {
-    // get the inputs from user
+    // Get input value and units
     var inputValue = parseFloat(document.getElementById("inputValue").value);
+    var inputUnit = document.getElementById("inputUnit").value;
+    var outputUnit = document.getElementById("outputUnit").value;
 
-    var unitSelect = document.getElementById("unitSelect");
-    var selectedUnit = unitSelect.options[unitSelect.selectedIndex].value;
-
-    // make da conversion
+    // Perform conversion
     var outputValue;
-    switch (selectedUnit) {
+    switch (inputUnit) {
         case "mm":
-            outputValue = inputValue;
+            outputValue = convertFromMillimeters(inputValue, outputUnit);
             break;
         case "cm":
-            outputValue = inputValue * 10;
+            outputValue = convertFromCentimeters(inputValue, outputUnit);
             break;
         case "m":
-            outputValue = inputValue * 1000;
+            outputValue = convertFromMeters(inputValue, outputUnit);
             break;
         case "km":
-            outputValue = inputValue * 1000000;
+            outputValue = convertFromKilometers(inputValue, outputUnit);
             break;
         default:
             outputValue = "Invalid unit";
     }
 
-    // show that
-    document.getElementById("output").textContent = "Converted value: " + outputValue + " " + selectedUnit;
+    // Display converted value
+    document.getElementById("output").textContent = "Converted value: " + outputValue + " " + outputUnit;
+}
+
+function convertFromMillimeters(value, outputUnit) {
+    switch (outputUnit) {
+        case "mm":
+            return value;
+        case "cm":
+            return value / 10;
+        case "m":
+            return value / 1000;
+        case "km":
+            return value / 1000000;
+        default:
+            return "Invalid unit";
+    }
+}
+
+function convertFromCentimeters(value, outputUnit) {
+    switch (outputUnit) {
+        case "mm":
+            return value * 10;
+        case "cm":
+            return value;
+        case "m":
+            return value / 100;
+        case "km":
+            return value / 100000;
+        default:
+            return "Invalid unit";
+    }
+}
+
+function convertFromMeters(value, outputUnit) {
+    switch (outputUnit) {
+        case "mm":
+            return value * 1000;
+        case "cm":
+            return value * 100;
+        case "m":
+            return value;
+        case "km":
+            return value / 1000;
+        default:
+            return "Invalid unit";
+    }
+}
+
+function convertFromKilometers(value, outputUnit) {
+    switch (outputUnit) {
+        case "mm":
+            return value * 1000000;
+        case "cm":
+            return value * 100000;
+        case "m":
+            return value * 1000;
+        case "km":
+            return value;
+        default:
+            return "Invalid unit";
+    }
 }
