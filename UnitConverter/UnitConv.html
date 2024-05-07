@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="ConvStyles.css">
+</head>
+<body>
+    <h2>Unit Converter</h2>
+    <div class="converter">
+        <input type="number" id="inputValue" placeholder="Enter value">
+        <select id="unitSelect" onchange="convertUnits()">
+            <option value="mm">Millimeters (mm)</option>
+            <option value="cm">Centimeters (cm)</option>
+            <option value="m">Meters (m)</option>
+            <option value="km">Kilometers (km)</option>
+        </select>
+        <p id="output"></p>
+    </div>
+    <script src="ConvScript.js"></script>
+</body>
+</html>
 
